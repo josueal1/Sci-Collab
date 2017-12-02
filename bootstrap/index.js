@@ -52,8 +52,6 @@ function gotData(data) {
         scripts.text = "function " + problem.toString().replace(/\s/g, '') + "toggle (){" + "$('#" + problem.toString().replace(/\s/g, '') + "').collapse('toggle');}";
         document.head.appendChild(scripts);
 
-
-
         var colm = document.createElement("div");
         colm.setAttribute("class", "col-sm");
 
@@ -70,6 +68,8 @@ function gotData(data) {
         labela.setAttribute("data-toggle", "collapse");
 
         labela.setAttribute("href", "#map");
+		
+		labela.setAttribute ("onclick", problem.toString().replace(/\s/g, '') + "Names()");
 
         var problemDescriptionLabel = document.createTextNode(problem.toString());
 

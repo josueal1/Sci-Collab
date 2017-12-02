@@ -16,7 +16,6 @@ api_key = "AIzaSyDf_t4AvGsnyFPX1mIm4rJtbQiRV5WspTk"
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-
         template = env.get_template('index.html')
 
         variables = {
