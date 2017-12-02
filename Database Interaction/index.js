@@ -9,7 +9,6 @@ var count=Math.random();
 var data={
 problem: problemName.value,
 description: mainText.value,
-counter: count
 }
 
 firebaseRef.push(data);
@@ -18,7 +17,6 @@ firebaseRef.push(data);
 function retrieve(){
 var firebaseRef = firebase.database().ref(discipline.value);
 firebaseRef.on('value',gotData,errData);
-
 }
 
 function gotData(data){
@@ -31,7 +29,6 @@ for (var i=0; i<keys.length; i++){
 var k=keys[i];
 var problem=fields[k].problem;
 var description=fields[k].description;
-
 	
 	var container = document.createElement("div");
 	container.setAttribute("class", "container"); //Have to append each of the following 
@@ -40,7 +37,7 @@ var description=fields[k].description;
 	row.setAttribute("class", "row");
 				
 		var scripts = document.createElement("script");
-		scripts.text = "function " +problem.toString()+"toggle (){" +"$('#" + problem.toString() +"').collapse('toggle');}";
+		scripts.text = "function " +problem.toString().replace(/\s/g, '')+"toggle (){" +"$('#" + problem.toString().replace(/\s/g, '') +"').collapse('toggle');}";
 		document.head.appendChild(scripts);
 
 		
@@ -50,9 +47,9 @@ var description=fields[k].description;
 		
 		
 		var labela = document.createElement("a");
-		labela.setAttribute("onmouseover", problem.toString()+"toggle()");
+		labela.setAttribute("onmouseover", problem.toString().replace(/\s/g, '')+"toggle()");
 
-		labela.setAttribute("onmouseout", problem.toString()+"toggle()");
+		labela.setAttribute("onmouseout", problem.toString().replace(/\s/g, '')+"toggle()");
 		
 		labela.setAttribute("class", "btn btn-primary");
 		
@@ -68,7 +65,7 @@ var description=fields[k].description;
 		
 		var descriptDiv = document.createElement("div");
 		descriptDiv.setAttribute("class", "collapse");
-		descriptDiv.setAttribute("id", problem.toString());
+		descriptDiv.setAttribute("id", problem.toString().replace(/\s/g, ''));
 		
 		var descriptionString = document.createTextNode(description.toString());
 		
