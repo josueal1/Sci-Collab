@@ -13,11 +13,10 @@ function generate ()
 		var problem = "problemname"; //have to fix this
 		var description = "problem description";
 				
-		var scripts = document.createElement("script");
+		var scripts = document.createElement("script"); //Replace instances of problem.toString()toggle into the random number counter thing
 		scripts.text = "function " +problem.toString()+"toggle (){" +"$('#" + problem.toString() +"').collapse('toggle');}";
 		document.head.appendChild(scripts);
 
-		
 		
 		var colm = document.createElement("div");
 		colm.setAttribute("class", "col-sm");
