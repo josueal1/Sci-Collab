@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firebase Web Basics</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="/bootstrap/bootstrap.css">
+	<script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/Database Interaction/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bootstrap/addcontent.html">populate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bootstrap/showdatabase.html">database</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	<!--div class="mainDiv" align="left">
+		<p><textarea id="discipline" placeholder="Enter text here..."></textarea></p>		
+	</div>
+	<br-->
+	<h1 align="center">Populate Database</h1>
+	 <select id="discipline" align="center">
+ 		 <option value="Physics">Physics</option>
+ 		 <option value="Chemistry">Chemistry</option>
+ 		 <option value="Math">Math</option>
+  	 <option value="Biology">Biology</option>
+     <option value="ComputerScience">Computer Science</option>
+     <option value="Philosophy">Philosophy</option>
+     <option value="Geoscience">Geoscience</option>
+     <option value="Economics">Economics</option>
+     <option value="Information theory">Information theory</option>
+     <option value="Linguistics">Linguistics</option>
+     <option value="Statistics">Statistics</option>
+     <option value="Uncured diseases">Uncured diseases</option>
+     <option value="Neuroscience">Neuroscience</option>
+     <option value="Accidents">Accidents</option>
+     <option value="Violence">Violence</option>
+     <option value="Global issues">Global issues</option>
+     <option value="Cancer">Cancer</option>
+     <option value="Medicine">Medicine</option>
+	</select> 
+	<div class="mainDiv" align="center">
+    <h3 align="center">Name of Unsolved Problem</h3>
+		<p><textarea id="problemname" placeholder="Enter text here..."></textarea></p>	
+	</div>
+  <h3 align="center">Description of the Problem</h3>
+	<div class="mainDiv" align="center">
+		<p><textarea id="maintext" placeholder="Enter text here..."></textarea></p>
+		<button id="submit" onclick="submitting()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>		
+	</div>  
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDj_-8VnE3oI945o9ubYre_WOOXYozewlg",
+    authDomain: "yhack2017-19c27.firebaseapp.com",
+    databaseURL: "https://yhack2017-19c27.firebaseio.com",
+    projectId: "yhack2017-19c27",
+    storageBucket: "yhack2017-19c27.appspot.com",
+    messagingSenderId: "236213733073"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="/bootstrap/index.js"></script>
+</body>
+</html>
+<!--{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
