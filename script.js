@@ -36,7 +36,7 @@ function generate ()
 	var descriptionString = document.createTextNode(description.toString());
 	
 	var scripts = document.createElement("script");
-	scripts.text = "function (){" +"$('#" + problem.toString() +").collapse('toggle');}";
+	scripts.text = "function" +problem.toString()+"toggle (){" +"$('#" + problem.toString() +").collapse('toggle');}";
 	
 	colm.appendChild(scripts);
 	descriptDiv.appendChild(descriptionString);
