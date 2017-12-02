@@ -38,11 +38,6 @@ document.getElementById("retrieveddata").innerHTML="";
 var container = document.createElement("div");
 container.setAttribute("class", "container"); //Have to append each of the following 
 
-if (keys.length < 1)
-{
-	clearing();
-}
-
 for (var i=0; i<keys.length; i++){
 var k=keys[i];
 var problem=fields[k].problem;
