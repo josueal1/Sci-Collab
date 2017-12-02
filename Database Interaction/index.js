@@ -3,6 +3,12 @@ var discipline=document.getElementById("discipline");
 var problemName=document.getElementById("problemname");
 var submits=document.getElementById("submit");
 
+function clearing()
+{
+	document.getElementById("maintext").value="";
+	document.getElementById("problemname").value="";
+}
+
 function submitting(){
 var firebaseRef = firebase.database().ref(discipline.value);
 var count=Math.random();
@@ -10,6 +16,8 @@ var data={
 problem: problemName.value,
 description: mainText.value,
 }
+clearing();
+
 
 firebaseRef.push(data);
 }
@@ -25,16 +33,22 @@ console.log(data.val());
 var fields =data.val();
 var keys=Object.keys(fields);
 document.getElementById("retrieveddata").innerHTML="";
+
+
+var container = document.createElement("div");
+container.setAttribute("class", "container"); //Have to append each of the following 
+
+
 for (var i=0; i<keys.length; i++){
 var k=keys[i];
 var problem=fields[k].problem;
 var description=fields[k].description;
 	
-	var container = document.createElement("div");
-	container.setAttribute("class", "container"); //Have to append each of the following 
-
-	var row = document.createElement("div");
-	row.setAttribute("class", "row");
+		if (i % 3 == 0)
+		{
+			var row = document.createElement("div");
+			row.setAttribute("class", "row");
+		}
 				
 		var scripts = document.createElement("script");
 		scripts.text = "function " +problem.toString().replace(/\s/g, '')+"toggle (){" +"$('#" + problem.toString().replace(/\s/g, '') +"').collapse('toggle');}";
