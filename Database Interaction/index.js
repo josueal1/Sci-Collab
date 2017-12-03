@@ -92,7 +92,7 @@ function gotData(data) {
         labela.setAttribute("href", "#map");
 
         var problemDescriptionLabel = document.createTextNode(problem.toString());
-		
+				
         labela.appendChild(problemDescriptionLabel);
 
         var descriptDiv = document.createElement("div");
