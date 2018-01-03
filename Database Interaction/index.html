@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>App</title>
+	<title>Sci-Collab</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
-<link rel="stylesheet" href="/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="/bootstrap/bootstrap.css">
 	<script src="https://use.fontawesome.com/939e9dd52c.js"></script>
-
+	<style>
+		.disclaimer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height:60px;			/* Height of the footer */
+			background:#6cf;
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="/bootstrap/style.css">
 </head>
 <body>
@@ -22,17 +30,26 @@
       <li class="nav-item">
         <a class="nav-link" href="/bootstrap/showdatabase.html">Access Entries</a>
       </li>
+			<li class="nav-item">
+        <a class="nav-link" href="#team">The Team</a>
+      </li>
     </ul>
   </div>
 </nav>
-<h1 align="center">Unsolved Problems</h1>
+<h1 align="center">Welcome to Sci-Collab:</h1>
+<h2 align="center">Universal Unsolved Science Problems</h2>
+<br>
 <h6 align="center">YHack 2017</h6>
 
 <p> We used the Google App Engine to host and run this website. It currently uses firebase database functions to
 add and remove entries in a database that contains names of subjects, and problems for each subject.
 </p>
+<br>
+<p> How to use the website:</p>
+<a> 1. Search for the Science problems you are interested in 'Access Enteries'.</a>
+<a>
 
-<p>Disclaimer: The information on this website is strictly not ours. Credit is due to its owners.</p> 
+<p class="disclaimer">Disclaimer: The information on this website is strictly not ours. Credit is due to its owners.</p>
 
 <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 <script>

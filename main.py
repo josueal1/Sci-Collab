@@ -19,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
         template = env.get_template('index.html')
 
         variables = {
-            
+        
         }
         self.response.out.write(template.render(variables))
 
