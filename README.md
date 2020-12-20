@@ -1,9 +1,8 @@
-Sci-Collab
+Sci-Collab 🔬
 ============================
 
-Sci-Collab allows scientist and other members in the science community to
-quickly share research data on human problems that have not been solved yet
-such as Parkinson Disease, P v NP, etc.
+Open conversations around science, research data, and unsolved challenges with the world! 
+> _Ex: `Parkinson's Disease`, `P vs NP`, `...`_
 
 ## Demo
 ##### Searching Problems
